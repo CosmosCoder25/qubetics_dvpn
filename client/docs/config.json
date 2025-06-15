@@ -5,11 +5,7 @@
     "description": "A REST interface for state queries and transactions",
     "version": "1.0.0"
   },
-  "//": [
-    "checkov:skip=CKV_OPENAPI_13: The API is public, no need for authentication",
-    "checkov:skip=CKV_OPENAPI_6: The API is public, no need for authentication",
-    "checkov:skip=CKV_OPENAPI_4: The API is public, no need for authentication"
-  ],
+  
   "securityDefinitions": {
     "default": {
       "type": "basic"
@@ -27,15 +23,7 @@
         }
       }
     },
-    {
-      "url": "./tmp-swagger-gen/qubetics/inflation/v1/query.swagger.json",
-      "operationIds": {
-        "rename": {
-          "Params": "InflationParams",
-          "TotalSupply": "InflationTotalSupply"
-        }
-      }
-    },
+  
     {
       "url": "./tmp-swagger-gen/qubetics/vesting/v2/query.swagger.json"
     },
@@ -169,6 +157,91 @@
         "circular": "ignore"
       }
     },
+    {
+      "url": "./tmp-swagger-gen/qubetics/deposit/v1/querier.swagger.json",
+      "operationIds": {
+        "rename": {
+          "QueryDeposits": "DepositQueryDeposits",
+          "QueryDeposit": "DepositQueryDeposit"
+        }
+      }
+    },
+    {
+      "url": "./tmp-swagger-gen/qubetics/lease/v1/querier.swagger.json",
+      "operationIds": {
+        "rename": {
+          "QueryLeases": "LeaseQueryLeases",
+          "QueryLease": "LeaseQueryLease",
+          "QueryParams": "LeaseQueryParams"
+        }
+      }
+    },
+    
+    {
+      "url": "./tmp-swagger-gen/qubetics/node/v3/querier.swagger.json",
+      "operationIds": {
+        "rename": {
+          "QueryNodes": "NodeQueryNodes",
+          "QueryNode": "NodeQueryNode",
+          "QueryParams": "NodeQueryParams"
+        }
+      }
+    },
+    
+    {
+      "url": "./tmp-swagger-gen/qubetics/oracle/v1/querier.swagger.json",
+      "operationIds": {
+        "rename": {
+          "QueryOracles": "OracleQueryOracles",
+          "QueryOracle": "OracleQueryOracle",
+          "QueryParams": "OracleQueryParams"
+        }
+      }
+    },
+    
+    {
+      "url": "./tmp-swagger-gen/qubetics/plan/v3/querier.swagger.json",
+      "operationIds": {
+        "rename": {
+          "QueryPlans": "PlanQueryPlans",
+          "QueryPlan": "PlanQueryPlan",
+          "QueryParams": "PlanQueryParams"
+        }
+      }
+    },
+    
+    {
+      "url": "./tmp-swagger-gen/qubetics/provider/v2/querier.swagger.json",
+      "operationIds": {
+        "rename": {
+          "QueryProviders": "ProviderQueryProviders",
+          "QueryProvider": "ProviderQueryProvider",
+          "QueryParams": "ProviderQueryParams"
+        }
+      }
+    },
+    
+    {
+      "url": "./tmp-swagger-gen/qubetics/session/v3/querier.swagger.json",
+      "operationIds": {
+        "rename": {
+          "QuerySessions": "SessionQuerySessions",
+          "QuerySession": "SessionQuerySession",
+          "QueryParams": "SessionQueryParams"
+        }
+      }
+    },
+    
+    {
+      "url": "./tmp-swagger-gen/qubetics/subscription/v3/querier.swagger.json",
+      "operationIds": {
+        "rename": {
+          "QuerySubscriptions": "SubscriptionQuerySubscriptions",
+          "QuerySubscription": "SubscriptionQuerySubscription",
+          "QueryParams": "SubscriptionQueryParams"
+        }
+      }
+    }, 
     {
       "url": "./tmp-swagger-gen/cosmos/base/tendermint/v1beta1/query.swagger.json",
       "operationIds": {
