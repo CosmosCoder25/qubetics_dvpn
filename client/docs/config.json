@@ -205,7 +205,10 @@
         "rename": {
           "QueryPlans": "PlanQueryPlans",
           "QueryPlan": "PlanQueryPlan",
-          "QueryParams": "PlanQueryParams"
+          "QueryParams": "PlanQueryParams",
+          "QueryNodesForPlan": "PlanQueryNodesForPlan"
+
+
         }
       }
     },
